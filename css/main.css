@@ -1,4 +1,8 @@
 
+h3{
+	text-align: center;
+}
+
 .jumbotron{
 background-image: url("../img/top.jpg");
 margin-bottom: 0px;
@@ -74,14 +78,15 @@ nav{
 	margin-left: 0px;
 	margin-right: 0px;
 	/*border: 4px solid red;*/
-	padding-bottom: 2em;
+	/*padding-bottom: 2em;*/
 	padding-left: 0px;
-	padding-right: 1em;
+	/*padding-right: 1em;*/
 	background-color: #343a40;
 }
 
 .flex1 {
 	display: flex;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-content: stretch;
 }
@@ -90,6 +95,7 @@ nav{
 .card{
 	width:13%;
 	border: 1px solid;
+	margin-bottom: 2em;
 
 
 }
@@ -223,7 +229,7 @@ footer li a:hover{
 
 .clearfix:after {
     content: "";
-    display: table;
+    display: block;
     clear: both;
 }
 
@@ -231,4 +237,54 @@ footer li a:hover{
 iframe {
 width: 100%;
 height: 700px;
+}
+
+.hidden{
+	display: none;
+}
+
+
+
+@media screen and (max-width: 1300px)  {
+	.flex1{
+		flex-wrap: wrap;
+		/*display: block;*/
+	}
+
+	.card{
+		width:25%;
+		/*display: inline-block;*/
+	}
+
+	
+	.jumbotron h1{
+		font-size: 2.5em;
+	}
+
+}
+
+
+@media screen and (max-width: 650px)  {
+	.flex1{
+		flex-wrap: wrap;
+		/*display: block;*/
+	}
+
+	.card{
+		width:50%;
+		/*display: inline-block;*/
+	}
+
+	#sectioncontainer{
+		display: none;
+	}
+
+	.jumbotron h1{
+		font-size: 1.5em;
+	}
+
+	.navbar-brand{
+		display: none;
+	}
+
 }
